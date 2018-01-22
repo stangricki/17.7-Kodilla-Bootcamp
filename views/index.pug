@@ -1,0 +1,21 @@
+html
+	head
+		title Application with usage of Google Authorization
+	<style type="text/css">
+		include ../css/style.css
+	</style>
+	body
+		header
+			h1 Application with usage of Google Authorization
+		main
+			div.form
+				h2 Please enter below your login and password.
+				form(action='http://localhost:3000/auth/google', method='GET')
+					p.Login
+						| Enter a login:
+						input.text(type='text', name='login')
+					p.Password
+						| Enter a password:
+						input.text(type='password', name='password')
+					input.button(type='submit', value='Submit')
+		footer Filip Stangricki &copy 2018
